@@ -1,0 +1,11 @@
+﻿<Window x:Class="WPF_Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SQL Query Demo" Height="350" Width="525" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="querybox" HorizontalAlignment="Left" Height="83" Margin="40,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437"/>
+        <TextBlock x:Name="resultbox" HorizontalAlignment="Left" Margin="40,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437" Height="89"/>
+        <Button x:Name="querybutton" Content="Submit Query" HorizontalAlignment="Left" Margin="208,275,0,0" VerticalAlignment="Top" Width="92" Click="querybutton_Click"/>
+
+    </Grid>
+</Window>
