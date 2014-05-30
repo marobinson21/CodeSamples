@@ -65,6 +65,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SISApplication.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="LoginSystem.cs" />
     <Compile Include="ConnectionNotSetException.cs" />
     <Compile Include="DBConnection.cs" />
@@ -99,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="searchbutton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="searchbutton_pressed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

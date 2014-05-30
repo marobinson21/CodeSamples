@@ -4,9 +4,11 @@
         Title="SQL Query Demo" Height="350" Width="525" ResizeMode="NoResize">
     <Grid>
         <Button x:Name="loginbutton" Content="Login" HorizontalAlignment="Left" Margin="204,165,0,0" VerticalAlignment="Top" Width="92" Click="loginbutton_Click"/>
-        <Label Content="Welcome to SIS" HorizontalAlignment="Left" Margin="203,40,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="loginname" HorizontalAlignment="Left" Height="23" Margin="193,81,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="loginpass" HorizontalAlignment="Left" Height="23" Margin="193,121,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="welcometext" Content="Welcome to SIS" HorizontalAlignment="Left" Margin="203,40,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="loginname" HorizontalAlignment="Left" Height="23" Margin="193,81,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120" GotKeyboardFocus="loginname_GotKeyboardFocus" LostKeyboardFocus="loginname_LostKeyboardFocus"/>
+        <TextBox x:Name="loginpass" HorizontalAlignment="Left" Height="23" Margin="193,121,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120" LostKeyboardFocus="loginpass_LostKeyboardFocus_1" GotKeyboardFocus="loginpass_GotKeyboardFocus_1"/>
+        <TextBlock x:Name="welcomebox" HorizontalAlignment="Left" Margin="126,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="264" Visibility="Hidden"/>
+        <Image x:Name="searchbutton" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="44" Source="searchbutton.jpg" MouseDown="searchbutton_MouseDown" Visibility="Hidden"/>
 
     </Grid>
 </Window>

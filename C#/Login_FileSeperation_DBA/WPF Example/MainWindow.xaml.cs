@@ -25,6 +25,7 @@ namespace WPF_Example
         public MainWindow()
         {
             InitializeComponent();
+            SISApplication.activescreen = "login";
             //string filename = @"C:\Users\Administrator\Documents\GitHub\CodeSamples\C#\WPF Example\WPF Example\example1.sqlite";
 
             //DBConnection database = new DBConnection(filename);
@@ -33,10 +34,46 @@ namespace WPF_Example
         private void loginbutton_Click(object sender, RoutedEventArgs e)
         {
 
-            if(LoginSystem.login(loginname.Text,"gorilla111"))
+            if(SISApplication.loginUser(loginname.Text,loginpass.Text))
             {
                 loginname.Visibility = System.Windows.Visibility.Hidden;
+                loginpass.Visibility = System.Windows.Visibility.Hidden;
+                welcometext.Visibility = System.Windows.Visibility.Hidden;
+                loginbutton.Visibility = System.Windows.Visibility.Hidden;
+
+                welcomebox.Visibility = System.Windows.Visibility.Visible;
+                welcomebox.Text = "Welcome to SIS, " + SISApplication.CurrentUser.getFormattedName()+". Please select an option from the menu above.";
+
+                searchbutton.Visibility = System.Windows.Visibility.Visible;
             }
         }
+
+        private void loginname_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            loginname.Text = "";
+        }
+
+        private void loginname_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            if(loginname.Text == "")
+                loginname.Text = "Username";
+        }
+
+        private void loginpass_LostKeyboardFocus_1(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            if (loginpass.Text == "")
+                loginpass.Text = "Password";
+        }
+
+        private void loginpass_GotKeyboardFocus_1(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            loginpass.Text = "";
+        }
+
+        private void searchbutton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            searchbutton.Source = new BitmapImage(new Uri(@"searchbutton_pressed.jpg", UriKind.Relative));
+        }
+
     }
 }

@@ -1,4 +1,21 @@
-﻿using System;
+﻿/***************************************************
+ * CLASS NAME: DBConnection
+ * CREATED BY: Marc Robinson
+ * 
+ * A class to abstract a bit of the Database Connection functionality
+ * away. This gives us a generic interface to connect to SQL
+ * databases. The internal logic of this class can be changed to
+ * use different database systems, but the overlaying classes and code
+ * that uses this abstraction will not need to change significantly.
+ * 
+ * PUBLIC METHODS AVAILABLE:
+ * Constructor (string filename): Opens a SQLite Database connection to the given filename.
+ * Open (): Opens the connection established by the Constructor.
+ * Query (string query): performs the SQL query in the given string and returns a DataSet object containing the results.
+ * ***************************************************/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +64,8 @@ namespace WPF_Example
 
         public DataSet Query(string querystring)
         {
+            Open();
+
             if (connection != null && open == true)
             {
                 DataSet data = new DataSet();
