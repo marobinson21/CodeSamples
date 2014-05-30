@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPF_Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SQL Query Demo" Height="350" Width="525" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="loginbutton" Content="Login" HorizontalAlignment="Left" Margin="204,165,0,0" VerticalAlignment="Top" Width="92" Click="loginbutton_Click"/>
+        <Label Content="Welcome to SIS" HorizontalAlignment="Left" Margin="203,40,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="loginname" HorizontalAlignment="Left" Height="23" Margin="193,81,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="loginpass" HorizontalAlignment="Left" Height="23" Margin="193,121,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

@@ -4,8 +4,8 @@
         Title="SQL Query Demo" Height="350" Width="525" ResizeMode="NoResize">
     <Grid>
         <TextBox x:Name="querybox" HorizontalAlignment="Left" Height="83" Margin="40,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437"/>
-        <TextBlock x:Name="resultbox" HorizontalAlignment="Left" Margin="40,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437" Height="89"/>
         <Button x:Name="querybutton" Content="Submit Query" HorizontalAlignment="Left" Margin="208,275,0,0" VerticalAlignment="Top" Width="92" Click="querybutton_Click"/>
+        <DataGrid x:Name="resultsgrid" HorizontalAlignment="Left" Margin="40,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.509" Height="111" Width="437"/>
 
     </Grid>
 </Window>
